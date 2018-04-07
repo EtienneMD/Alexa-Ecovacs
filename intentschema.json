@@ -1,0 +1,12 @@
+{
+  "intents": [
+    { "intent": "CleanIntent" },
+    { "intent": "EdgeIntent" },
+    { "intent": "StopIntent"},
+    { "intent": "ChargeIntent" },
+    { "intent": "ServiceIntent"},
+    { "intent": "AMAZON.HelpIntent" },
+    { "intent": "AMAZON.CancelIntent" },
+    { "intent": "AMAZON.StopIntent" }
+  ]
+}

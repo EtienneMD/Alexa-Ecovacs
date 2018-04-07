@@ -1,0 +1,7 @@
+README.rst
+setup.cfg
+stringcase.py
+stringcase.egg-info/PKG-INFO
+stringcase.egg-info/SOURCES.txt
+stringcase.egg-info/dependency_links.txt
+stringcase.egg-info/top_level.txt
