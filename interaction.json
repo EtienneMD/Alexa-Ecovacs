@@ -1,0 +1,90 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "my vacuum",
+            "intents": [
+                {
+                    "name": "CleanIntent",
+                    "slots": [],
+                    "samples": [
+                        "to clean",
+                        "to autoclean",
+                        "to start cleaning",
+                        "clean",
+                        "cleaning"
+                    ]
+                },
+                {
+                    "name": "EdgeIntent",
+                    "slots": [],
+                    "samples": [
+                        "to clean around the room",
+                        "to clean around the house",
+                        "to go around the room",
+                        "to go around the house",
+                        "to start edge cleaning"
+                    ]
+                },
+                {
+                    "name": "StopIntent",
+                    "slots": [],
+                    "samples": [
+                        "to stop",
+                        "stop",
+                        "to hold still",
+                        "to stand still",
+                        "to sit still"
+                    ]
+                },
+                {
+                    "name": "ChargeIntent",
+                    "slots": [],
+                    "samples": [
+                        "to go away",
+                        "to charge",
+                        "to start charging",
+                        "to go for a charge",
+                        "to go back home",
+                        "to go home",
+                        "to go back to its station"
+                    ]
+                },
+                {
+                    "name": "ServiceIntent",
+                    "slots": [],
+                    "samples": [
+                        "to come out for some servicing",
+                        "to come out for some service",
+                        "to come out from under the couch",
+                        "to come out",
+                        "it needs some servicing",
+                        "it needs to be serviced",
+                        "it needs some maintenance",
+                        "it needs to be emptied",
+                        "it is time for some servicing",
+                        "it is time for some service",
+                        "it is time for some maintenance",
+                        "it is time to empty out it's dustbin",
+                        "its dustbin is full",
+                        "maintenance",
+                        "service",
+                        "dustbin"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                }
+            ],
+            "types": []
+        }
+    }
+}
