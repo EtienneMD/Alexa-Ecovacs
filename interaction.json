@@ -46,7 +46,10 @@
                         "to go for a charge",
                         "to go back home",
                         "to go home",
-                        "to go back to its station"
+                        "to go back to its charging station",
+                        "to go back to its station",
+                        "to go back to its charger",
+                        "charge"
                     ]
                 },
                 {
