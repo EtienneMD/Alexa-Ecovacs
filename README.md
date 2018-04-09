@@ -1,5 +1,5 @@
 # Alexa-Ecovacs
-Alexa skill to interact with your Ecovacs vaccum.
+Alexa skill to interact with your Ecovacs vacuum.
 
 # Commands
 The skill has the following features:
@@ -30,7 +30,8 @@ The skill has the following features:
 2. Under Designer, select Alexa Skills Kit as a trigger.
 3. Under Function code, select Upload .ZIP file and use the provided Deploy.zip file.
 4. Under Function code, set Handler to skill.lambda_handler.
-5. Under Environment variables, define variables as described below.
+5. Under Basic settings, set Timeout to 15 seconds.
+6. Under Environment variables, define variables as described below.
 
 ## Environment variables
 ### Required
@@ -41,12 +42,14 @@ The skill has the following features:
 ### Optional
 * **applicationId** : Your Alexa skill ID.  
 (Prevents unauthorized access to your skill)
+* **timezone** : Your time zone. (i.e. America/Montreal, Europe/Amsterdam or Australia/Sydney)  
+(Adds a card in the Alexa app to log your cleaning session)
 
 # Development
 Want to contribute? Let me know! This is my first GitHub project, I'd love to hear how to make it better.
 
 # Thanks
-This has only been made possible thanks to the ammazing work of @wpietri and his [Sucks](https://github.com/wpietri/sucks) library.
+This has only been made possible thanks to the amazing work of @wpietri and his [Sucks](https://github.com/wpietri/sucks) library.
 
 # License
 MIT
