@@ -2,6 +2,7 @@ from __future__ import print_function
 from time import sleep
 from datetime import datetime
 from sucks import *
+from pytz import timezone
 import os
 
 def build_api():
@@ -51,13 +52,28 @@ def build_speechlet_response(card, speech_output, reprompt_text, should_end_sess
         'shouldEndSession': should_end_session
     }
 
-def build_simple_card(output):
-    card = {
-            'type': 'Simple',
-            'title': "Ecovacs",
-            'content': output
+def build_clean_card():
+    now = datetime.now(timezone(os.environ['timezone']))
+    card_output = "Cleaning session started on "
+    date = now.strftime("%B %d")
+    if now.day<10:
+        date = date.replace("0","")
+    if now.day % 10 == 1:
+        date += "st "
+    elif now.day % 10 == 2:
+        date += "nd "
+    elif now.day % 10 == 3:
+        date += "rd "
+    else:
+        date += "th "
+    time = (now.strftime("at %I:%M%p.")).lower()
+    if time[3] == "0":
+        time = time[:3]+time[4:]
+    return {
+        'type': 'Simple',
+        'title': "Ecovacs",
+        'content': card_output + date + time
     }
-    return card
 
 def build_response(session_attributes, speechlet_response):
     return {
@@ -70,19 +86,10 @@ def build_response(session_attributes, speechlet_response):
 
 def get_clean_response():
     speech_output = "Your vaccum is starting its cleaning session."
-    now = datetime.now()
-    card_output = "Cleaning session started on "
-    card_output += now.strftime("%B %d")
-    if now.day % 10 == 1:
-        card_output += "st "
-    elif now.day % 10 == 2:
-        card_output += "nd "
-    elif now.day % 10 == 3:
-        card_output += "rd "
+    if 'timezone' in os.environ:
+        card = build_clean_card()
     else:
-        card_output += "th "
-    card_output += (now.strftime("at %I:%M %p.")).lower()
-    card = build_simple_card(card_output)
+        card = None
     should_end_session = True
     return build_response(None, build_speechlet_response(
         card, speech_output, None, should_end_session))
