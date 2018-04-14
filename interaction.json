@@ -26,6 +26,20 @@
                     ]
                 },
                 {
+                    "name": "SpotIntent",
+                    "slots": [],
+                    "samples": [
+                        "to start spot cleaning",
+                        "to start cleaning this spot",
+                        "to clean this spot",
+                        "to spot clean",
+                        "to clean in circles",
+                        "to clean around in circles",
+                        "to go around in circles",
+                        "spot"
+                    ]
+                },
+                {
                     "name": "StopIntent",
                     "slots": [],
                     "samples": [
