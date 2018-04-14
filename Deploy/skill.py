@@ -152,6 +152,9 @@ def on_intent(intent_request, session):
     elif intent_name == "EdgeIntent":
         perform_action(Edge())
         return get_clean_response()
+    elif intent_name == "SpotIntent":
+        perform_action(Spot())
+        return get_clean_response()
     elif intent_name == "StopIntent":
         perform_action(Stop())
         return get_stop_response()
