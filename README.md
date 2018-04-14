@@ -3,16 +3,18 @@ Alexa skill to interact with your Ecovacs vacuum.
 
 # Commands
 The skill has the following features:
-* Clean - Starts an automatic cleaning session
-* Edge - Starts an edge cleaning session
-* Stop - Stops your vacuum
-* Charge - Sends your vacuum back to its charging station
-* Service - Tells your vacuum to turn around and move forward a few feet  
+* Clean - Starts an automatic cleaning session.
+* Edge - Starts an edge cleaning session.
+* Spot - Starts spot cleaning session.
+* Stop - Stops your vacuum.
+* Charge - Sends your vacuum back to its charging station.
+* Service - Tells your vacuum to turn around and move forward a few feet.  
 (useful if your vacuum is charging under a couch like mine is)
 
 ### Examples
 * Alexa, ask my vacuum to start cleaning.
 * Alexa, tell my vacuum to cleaning around the room.
+* Alexa, tell my vacuum to clean this spot.
 * Alexa, ask my vacuum to stop.
 * Alexa, ask my vacuum to go back to its charger.
 * Alexa, tell my vacuum it needs to be emptied.
