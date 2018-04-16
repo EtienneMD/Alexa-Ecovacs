@@ -89,6 +89,24 @@
                     ]
                 },
                 {
+                    "name": "BatteryIntent",
+                    "slots": [],
+                    "samples": [
+                        "how full are its batteries",
+                        "how much battery it has",
+                        "how much battery is left",
+                        "how much battery",
+                        "how much charge it has",
+                        "how much charge is left",
+                        "how much charge",
+                        "battery percentage",
+                        "batteries",
+                        "battery",
+                        "percentage",
+                        "percent"
+                    ]
+                },
+                {
                     "name": "AMAZON.HelpIntent",
                     "samples": []
                 },
