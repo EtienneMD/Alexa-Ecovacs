@@ -24,7 +24,9 @@ def perform_action(action):
     vacbot = build_api()
     vacbot.connect_and_wait_until_ready()
     vacbot.run(action)
+    sleep(1)
     vacbot.disconnect()
+    return vacbot
 
 def perform_service():
     vacbot = build_api()
@@ -102,7 +104,7 @@ def get_charge_response():
 
 def get_stop_response():
     speech_output = "Your vacuum is stopping."
-    should_end_session = true
+    should_end_session = True
     return build_response(None, build_speechlet_response(
         None, speech_output, None, should_end_session))
 
@@ -110,6 +112,12 @@ def get_service_response():
     speech_output = "Your vacuum is ready for some servicing."
     should_end_session = True
     return build_response(None , build_speechlet_response(
+        None, speech_output, None, should_end_session))
+
+def get_battery_response(battery):
+    speech_output = "Your vacuum's battery is currently at %s%%." % int(battery*100)
+    should_end_session = True
+    return build_response(None, build_speechlet_response(
         None, speech_output, None, should_end_session))
 
 def get_welcome_response():
@@ -164,6 +172,9 @@ def on_intent(intent_request, session):
     elif intent_name == "ServiceIntent":
         perform_service()
         return get_service_response()
+    elif intent_name == "BatteryIntent":
+        battery = perform_action(GetBatteryState())
+        return get_battery_response(battery.battery_status)
     elif intent_name == "AMAZON.HelpIntent":
         return get_welcome_response()
     elif intent_name == "AMAZON.CancelIntent" or intent_name == "AMAZON.StopIntent":
