@@ -10,6 +10,7 @@ The skill has the following features:
 * Charge - Sends your vacuum back to its charging station.
 * Service - Tells your vacuum to turn around and move forward a few feet.  
 (useful if your vacuum is charging under a couch like mine is)
+* Battery Status - Tells you how much battery you have left.
 
 ### Examples
 * Alexa, ask my vacuum to start cleaning.
@@ -18,6 +19,7 @@ The skill has the following features:
 * Alexa, ask my vacuum to stop.
 * Alexa, ask my vacuum to go back to its charger.
 * Alexa, tell my vacuum it needs to be emptied.
+* Alexa, ask my vacuum how much battery it has.
 
 # Installation
 
